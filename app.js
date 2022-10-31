@@ -65,7 +65,7 @@ console.log(filter);
 // Exercise 5 Section
 console.log("Exercise 5:\n==========\n");
 
-users.sort((a,b) => a.score - b.score);
+users.sort((a,b) => b.score - a.score);
 console.log(users);
 
 // Exercise 6 Section
