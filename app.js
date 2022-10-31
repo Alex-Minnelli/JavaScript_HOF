@@ -48,9 +48,13 @@ users.forEach(name => console.log(name.name));
 // Exercise 3 Section
 console.log("Exercise 3:\n==========\n");
 
-let scores = users.map(({name, score}) => ({[name]: score}));
+//let scores = users.map(({name, score}) => ({[name]: score}));
 
-console.log(scores);
+let userScore = users.map(element =>{
+    return [{ name: element.name}, { socre: element.score}];
+})
+
+console.log(userScore);
 
 // Exercise 4 Section
 console.log("Exercise 4:\n==========\n");
@@ -67,9 +71,5 @@ console.log(users);
 // Exercise 6 Section
 console.log("Exercise 6:\n==========\n");
 
-function avgScore(){
-    let sum = users.reduce((sum, val) => sum + val.score, 0);
-    return sum/users.length;
-}
-
-console.log(avgScore());
+let avg = users.reduce((sum, val) => sum + val.score, 0)/users.length;
+console.log(avg);
